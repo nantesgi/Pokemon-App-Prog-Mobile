@@ -17,15 +17,24 @@ import com.example.homepage.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
+    //private Spinner spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Spinner spinnerTemas = (Spinner) findViewById(R.id.spinner_temas);
+//       ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+//                R.array.temas_array, android.R.layout.simple_spinner_item);
+//       spinnerTemas.setAdapter(adapter);
+////        spinner.setOnItemSelectedListener(this);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -44,6 +53,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+//    spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//        @Override
+//        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//            // Código a ser executado quando um item for selecionado
+//        }
+//
+//        @Override
+//        public void onNothingSelected(AdapterView<?> parent) {
+//            // Código a ser executado quando nada for selecionado
+//        }
+//    });
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

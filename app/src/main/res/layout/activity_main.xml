@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/Theme.HomePage.AppBarOverlay">
@@ -30,5 +31,13 @@
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
         app:srcCompat="@drawable/ic_baseline_home_24" />
+
+    <Spinner
+        android:id="@+id/spinner_temas"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:entries="@array/temas_array"
+        app:layout_anchor="@+id/appBarLayout"
+        app:layout_anchorGravity="center" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
